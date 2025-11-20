@@ -16,5 +16,9 @@ app.use('/api/soal', soalRoutes);
 app.use('/api/latihan', latihanRoutes);
 app.use('/api/nilai', nilaiRoutes);
 
+app.get("/", (req, res) => {
+  res.send("API aktif ✅");
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Backend berjalan di port ${PORT}`));
